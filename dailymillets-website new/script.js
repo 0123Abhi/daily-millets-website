@@ -1,0 +1,8 @@
+const products=[
+['Browntop Millet Rice','500 g','₹149','browntop.jpg'],['Ragi Flour','500 g','₹149','quinoa.jpg'],['Millet Pasta','200 g','₹129','pasta-foxtail.jpg'],['Millet Cookies','200 g','₹149','cookies.jpg'],['Little Millet Rice','500 g','₹149','little.jpg'],['Foxtail Millet Rice','500 g','₹149','proso.jpg']];
+const cards=document.getElementById('cards');
+function render(list=products){cards.innerHTML=list.map((p,i)=>`<article class="card"><div class="card-img"><img src="assets/${p[3]}" alt="${p[0]}"></div><h3>${p[0]}</h3><small>${p[1]}</small><div class="rating">★★★★★ <span>4.${8-i}</span></div><small>🌿 Rich in Nutrients</small><div class="price">${p[2]}</div><button class="cart" onclick="addCart('${p[0]}')">🛒 Add to Cart</button></article>`).join('')}
+render();
+function addCart(name){alert(name+' added to cart!');}
+document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.toLowerCase();render(products.filter(p=>p[0].toLowerCase().includes(q)));});
+document.querySelector('.menu').addEventListener('click',()=>{document.querySelector('.header nav').style.display=document.querySelector('.header nav').style.display==='flex'?'none':'flex';document.querySelector('.header nav').style.position='absolute';document.querySelector('.header nav').style.top='64px';document.querySelector('.header nav').style.left='0';document.querySelector('.header nav').style.right='0';document.querySelector('.header nav').style.background='#fff';document.querySelector('.header nav').style.padding='20px';document.querySelector('.header nav').style.flexDirection='column';});
