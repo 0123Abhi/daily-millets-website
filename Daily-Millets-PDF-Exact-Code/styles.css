@@ -1,0 +1,36 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f8f2e4}
+.page{position:relative;width:100%;max-width:1536px;margin:0 auto;line-height:0}
+.design{display:block;width:100%;height:auto}
+.hotspot{position:absolute;display:block;z-index:5;cursor:pointer;background:transparent;border:0}
+.hotspot:hover{outline:2px solid rgba(45,84,34,.18);background:rgba(45,84,34,.025)}
+/* Coordinates are percentages of the supplied one-page PDF artwork. */
+.hs-products{left:42.0%;top:.78%;width:5.0%;height:.65%}
+.hs-shop{left:48.2%;top:.78%;width:3.2%;height:.65%}
+.hs-millets{left:54.0%;top:.78%;width:5.0%;height:.65%}
+.hs-recipes{left:61.0%;top:.78%;width:4.2%;height:.65%}
+.hs-story{left:67.7%;top:.78%;width:4.5%;height:.65%}
+.hs-contact{left:74.2%;top:.78%;width:4.0%;height:.65%}
+
+.hs-hero-products{left:10.0%;top:8.0%;width:10.0%;height:2.0%}
+.hs-hero-story{left:23.0%;top:8.0%;width:11.0%;height:2.0%}
+
+.hs-cat-1{left:3.0%;top:15.3%;width:29%;height:5.2%}
+.hs-cat-2{left:35.5%;top:15.3%;width:29%;height:5.2%}
+.hs-cat-3{left:67.5%;top:15.3%;width:29%;height:5.2%}
+.hs-cat-4{left:3.0%;top:20.7%;width:29%;height:5.0%}
+.hs-cat-5{left:35.5%;top:20.7%;width:29%;height:5.0%}
+.hs-cat-6{left:67.5%;top:20.7%;width:29%;height:5.0%}
+
+.hs-favorites{left:3%;top:28.0%;width:94%;height:8.2%}
+.hs-palm{left:2%;top:37.0%;width:96%;height:5.0%}
+.hs-story-block{left:52%;top:42.0%;width:46%;height:6.5%}
+.hs-testimonials{left:2%;top:49.0%;width:96%;height:7.7%}
+.hs-recipes-block{left:2%;top:57.0%;width:96%;height:7.0%}
+.hs-footer{left:2%;top:64.0%;width:96%;height:9.0%}
+
+section{position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none}
+@media(max-width:700px){
+  .hotspot:hover{outline:none;background:transparent}
+}
